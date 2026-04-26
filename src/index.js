@@ -17,15 +17,18 @@ const fromCel = {
 };
 
 function convert() {
-    const frV = fromValue.value;
+    const frV = parseFloat(fromValue.value);
     const frU = fromInputs.value;
     const tU = toInputs.value;
-    // console.log(`From: "${frU}", To: "${tU}", Value: ${frV}`); good for debugging
-    if(frU === tU) {
-        output.textContent = 'Units to be converted can\'t be the same. Please select different ones. ';
+    console.log(`From: "${frU}", To: "${tU}", Value: ${frV}`); 
+    if(frU ==="" || tU ==="") {
+        output.textContent = 'Please select both units. ';
         return;
     }
-
+    if(frU === tU) {
+        output.textContent = 'Please select different units for conversion.';
+        return;
+    }
     if (isNaN(frV)){
         output.textContent = 'Please enter a valid number.';
         return;

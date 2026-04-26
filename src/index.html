@@ -12,18 +12,20 @@
             
             <input type = "number" id="inputNum" placeholder="0.00"/>
         
-            <input list = "fromUnits" id="fromInpVal" placeholder="From Unit"/>
-            <datalist id = "fromUnits">
-                <option value="celsius"></option>
-                <option value="fahrenheit"></option>
-                <option value="kelvin"></option>
-            </datalist>
-        <input list = "toUnits" id="toInpVal" placeholder="To Unit"/>
-            <datalist id = "toUnits">
-                <option value="celsius"></option>
-                <option value="fahrenheit"></option>
-                <option value="kelvin"></option>
-            </datalist>
+            
+            <select id = "fromInpVal">
+                <option value = ""disabled selected hidden>From Unit</option>
+                <option value="celsius">celsius</option>
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="kelvin">kelvin</option>
+            </select>
+        
+            <select id = "toInpVal">
+                <option value = ""disabled selected hidden>To Unit</option>
+                <option value="celsius">celsius</option>
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="kelvin">kelvin</option>
+            </select>
             <button id="convertBtn">Convert</button>
         </div>
         <h4 id="result"></h4>
